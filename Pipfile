@@ -1,0 +1,36 @@
+[[source]]
+name = "aliyun-pypi"
+url = "https://mirrors.aliyun.com/pypi/simple"
+verify_ssl = true
+
+[requires]
+python_version = "3.7"
+
+[dev-packages]
+black = "==19.3b0"
+isort = "*"
+autopep8 = "*"
+flake8 = "*"
+faker = "*"
+requests-mock = "*"
+pytest = "*"
+mypy = "*"
+flask-debugtoolbar = "*"
+pre-commit = "*"
+v = {editable = true,version = "*"}
+
+[packages]
+flask = "*"
+flask-sqlalchemy = "*"
+marshmallow-sqlalchemy = "*"
+flask-migrate = "*"
+flask-marshmallow = "*"
+flask-restful = "*"
+flask-login = "*"
+bootstrap-flask = "*"
+python-dotenv = "*"
+flasgger = "*"
+pyyaml = "*"
+supervisor = "*"
+tzlocal = "*"
+
