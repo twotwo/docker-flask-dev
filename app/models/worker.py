@@ -13,7 +13,7 @@ class Worker(db.Model, CRUDMixin):
     default_job = db.Column(db.String(30), default="", comment="Default Job Name")
 
 
-class WorkerSchema(ma.ModelSchema):
+class WorkerSchema(ma.SQLAlchemySchema):
     class Meta:
         model = Worker
 

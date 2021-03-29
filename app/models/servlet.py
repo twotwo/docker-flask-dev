@@ -29,7 +29,7 @@ class Servlet(db.Model, CRUDMixin):
         )
 
 
-class ServletSchema(ma.ModelSchema):
+class ServletSchema(ma.SQLAlchemySchema):
     class Meta:
         model = Servlet
 

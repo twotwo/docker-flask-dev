@@ -15,7 +15,7 @@ class Predictor(db.Model, CRUDMixin):
     recon = db.Column(db.JSON, default="", comment="生成 VR 图像的像素大小，例如 512")
 
 
-class PredictorSchema(ma.ModelSchema):
+class PredictorSchema(ma.SQLAlchemySchema):
     class Meta:
         model = Predictor
 

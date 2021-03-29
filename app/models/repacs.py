@@ -27,7 +27,7 @@ class RePACS(db.Model, CRUDMixin):
         )
 
 
-class RepacsSchema(ma.ModelSchema):
+class RepacsSchema(ma.SQLAlchemySchema):
     class Meta:
         model = RePACS
 

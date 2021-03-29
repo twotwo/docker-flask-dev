@@ -36,7 +36,7 @@ class Job(db.Model, CRUDMixin):
     servlets = db.relationship("Servlet")
 
 
-class JobSchema(ma.ModelSchema):
+class JobSchema(ma.SQLAlchemySchema):
     class Meta:
         model = Job
 
