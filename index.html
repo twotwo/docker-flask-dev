@@ -36,7 +36,8 @@
 
                         <form action="/create-task" method="POST">
                             <div class="form-group">
-                                <input type="text" name="content" placeholder="Task" class="form-control" autofocus>
+                                <label>title</label>: <input type="text" name="title" placeholder="Task" class="form-control" autofocus>
+                                <label>text</label>: <input type="text" name="text" placeholder="Task" class="form-control" autofocus>
                             </div>
                             <button type="submit" class="btn btn-primary btn-block">Save</button>
                         </form>
@@ -46,9 +47,9 @@
                         <ul class="list-group">
                             {% for task in tasks %}
                             <li class="list-group-item">
-                                <span class="{% if task.done %} done {% endif %}">{{task.content}}</span> <a
+                                <span class="{% if task.done %} done {% endif %}">{{task}}</span> <a
                                     href="/done/{{task.id}}" class="btn btn-success btn-sm">Done</a>
-                                <a href="{{url_for('delete', id=task.id)}}" class="btn btn-danger btn-sm">Delete</a>
+                                <a href="{{url_for('view.index.delete', id=task.id)}}" class="btn btn-danger btn-sm">Delete</a>
                             </li>
                             {% endfor %}
                         </ul>

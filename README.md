@@ -1,6 +1,12 @@
 # flask-modern-dev
 
-See <http://wiki.li3huo.com/Docker_Python_Dev>
+See <http://wiki.li3huo.com/Docker_Python_Dev> for more details.
+
+This branch is a demo project that implements a REST API for a "task app" using:
+
+- Python3
+- Flask 1.1
+- Flask-SQLAlchemy 2.5(SQLAlchemy 1.4 in)
 
 ## Local Dev Guide
 
@@ -13,9 +19,11 @@ See <http://wiki.li3huo.com/Docker_Python_Dev>
 ## Run
 
     . ./venv/bin/activate
-    pytest app.py
+    pytest app.py   # flask run
 
 ## Run tests
 
     . ./venv/bin/activate
+    export PYTHONPATH=.
     pytest
+    pytest --cov=app tests
