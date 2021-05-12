@@ -11,9 +11,7 @@ class Task(db.Model, ModelMixin):
     done = db.Column(db.Boolean)
     created_at = db.Column(db.DateTime, default=datetime.datetime.now)
     updated_at = db.Column(
-        db.DateTime,
-        onupdate=datetime.datetime.now,
-        default=datetime.datetime.now
+        db.DateTime, onupdate=datetime.datetime.now, default=datetime.datetime.now
     )
 
     def __init__(self, title, text):

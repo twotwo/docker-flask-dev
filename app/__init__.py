@@ -9,9 +9,18 @@ def create_app(config_name):
     _app.config.from_object(config[config_name])
     config[config_name].init_app(_app)
 
-    from app.view.index import index_api
+    from app.view.index import bp_index
 
-    _app.register_blueprint(index_api, url_prefix="/")
+    _app.register_blueprint(bp_index, url_prefix="/")
+
+    from app.view.users import bp_users
+
+    _app.register_blueprint(bp_users, url_prefix="/")
+
+
+    from app.view.sessions import bp_sessions
+
+    _app.register_blueprint(bp_sessions, url_prefix="/")
 
     from app.view.api import bp_api
 

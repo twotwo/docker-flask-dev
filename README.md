@@ -1,12 +1,12 @@
-# flask-modern-dev
+# Flask RESTful with SQLite
 
-See <http://wiki.li3huo.com/Docker_Python_Dev> for more details.
+See <https://slides.li3huo.com/resource-oriented-design/> for more details.
 
 This branch is a demo project that implements a REST API for a "task app" using:
 
 - Python3
 - Flask 1.1
-- Flask-SQLAlchemy 2.5(SQLAlchemy 1.4 in)
+- Flask-SQLAlchemy 2.5(depend on SQLAlchemy 1.4)
 
 ## Local Dev Guide
 
@@ -27,3 +27,7 @@ This branch is a demo project that implements a REST API for a "task app" using:
     export PYTHONPATH=.
     pytest
     pytest --cov=app tests
+
+## Features
+
+[RESTful API - Security](./docs/restful-api-security.md)

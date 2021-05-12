@@ -3,16 +3,16 @@ from app.domain import db
 from app.domain.task import Task
 
 
-index_api = Blueprint(__name__, __name__)
+bp_index = Blueprint(__name__, __name__)
 
 
-@index_api.route("/")
+@bp_index.route("/")
 def home():
     tasks = Task.query.all()
     return render_template("index.html", tasks=tasks)
 
 
-@index_api.route("/create-task", methods=["POST"])
+@bp_index.route("/create-task", methods=["POST"])
 def create():
     new_task = Task(title=request.form["title"], text=request.form["text"])
     db.session.add(new_task)
@@ -20,7 +20,7 @@ def create():
     return redirect(url_for("view.index.home"))
 
 
-@index_api.route("/done/<id>")
+@bp_index.route("/done/<id>")
 def done(id):
     task = Task.query.filter_by(id=int(id)).first()
     task.done = not (task.done)
@@ -28,7 +28,7 @@ def done(id):
     return redirect(url_for("view.index.home"))
 
 
-@index_api.route("/delete/<id>")
+@bp_index.route("/delete/<id>")
 def delete(id):
     Task.query.filter_by(id=int(id)).delete()
     db.session.commit()
