@@ -16,17 +16,21 @@ This branch is a demo project that implements a REST API for a "task app" using:
     pip install -r requirements.txt && \
         pip install -r requirements-dev.txt
 
-## Run
+### Run
 
     . ./venv/bin/activate
     pytest app.py   # flask run
 
-## Run tests
+### Run tests
 
     . ./venv/bin/activate
     export PYTHONPATH=.
     pytest
     pytest --cov=app tests
+
+## Deployment (docker)
+
+    docker-compose build && docker-compose up -d
 
 ## Features
 

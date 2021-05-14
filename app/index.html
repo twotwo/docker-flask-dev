@@ -49,7 +49,7 @@
                             <li class="list-group-item">
                                 <span class="{% if task.done %} done {% endif %}">{{task}}</span> <a
                                     href="/done/{{task.id}}" class="btn btn-success btn-sm">Done</a>
-                                <a href="{{url_for('view.index.delete', id=task.id)}}" class="btn btn-danger btn-sm">Delete</a>
+                                <a href="{{url_for('app.view.index.delete', id=task.id)}}" class="btn btn-danger btn-sm">Delete</a>
                             </li>
                             {% endfor %}
                         </ul>

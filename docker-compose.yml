@@ -1,0 +1,11 @@
+version: '2.3'
+services:
+  restful-server:
+    image: flask-restful
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    ports:
+      - 8080:8080
+    volumes:
+      - /tmp/flask/logs:/app/logs
